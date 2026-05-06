@@ -1,3 +1,4 @@
+<?php $page = basename($_SERVER['PHP_SELF']); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -306,12 +307,11 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>laporan</h1>
+      <h1>Laporan</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Pages</li>
-          <li class="breadcrumb-item active">Blank</li>
+          <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+          <li class="breadcrumb-item active">Laporan</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
