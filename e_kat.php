@@ -1,27 +1,18 @@
 <?php
 include "koneksi.php";
+$id = $_GET['id'];
+$sql = mysqli_query($conn, "SELECT * FROM categories WHERE id = '$id'");
+$hasil = mysqli_fetch_array($sql);
+if (isset($_POST['update'])) {
 
-$auto = mysqli_query($conn, "select max(kd_kat) as max_code from categories");
-$hasil = mysqli_fetch_array($auto);
-$code = $hasil['max_code'];
-if ($code == NULL) {
-    $urutan = 0;
-} else {
-    $urutan = (int) substr($code, 1, 3);
-}
-$urutan++;
-$huruf = "K";
-$kd_kat = $huruf . sprintf("%03s", $urutan);
-
-if (isset($_POST['simpan'])) {
     $nm_kat = $_POST['nm_kat'];
 
-    $query = mysqli_query($conn, "INSERT INTO categories(kd_kat, category_name) VALUES ('$kd_kat', '$nm_kat')");
+    $query = mysqli_query($conn, "UPDATE categories SET category_name = '$nm_kat' WHERE id='$id'");
     if ($query) {
-        echo "<script>alert('Data berhasil ditambahkan!')</script>";
+        echo "<script>alert('Data berhasil diubah!')</script>";
         header("refresh:0, kategori_produk.php");
     } else {
-        echo "<script>alert('Data gagal ditambahkan!')</script>";
+        echo "<script>alert('Data gagal diubah!')</script>";
         header("refresh:0, kategori_produk.php");
     }
 }
@@ -65,7 +56,7 @@ if (isset($_POST['simpan'])) {
     <header id="header" class="header fixed-top d-flex align-items-center">
 
         <div class="d-flex align-items-center justify-content-between">
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="index.php" class="logo d-flex align-items-center">
                 <img src="assets/img/logo.png" alt="">
                 <span class="d-none d-lg-block">rezzaproject</span>
             </a>
@@ -190,7 +181,7 @@ if (isset($_POST['simpan'])) {
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
                     <li class="breadcrumb-item">Kategori Produk</li>
-                    <li class="breadcrumb-item active">Tambah</li>
+                    <li class="breadcrumb-item active">Edit</li>
                 </ol>
             </nav>
         </div><!-- End Page Title -->
@@ -201,25 +192,25 @@ if (isset($_POST['simpan'])) {
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Tambah Kategori Produk</h5>
+                            <h5 class="card-title">Edit Kategori Produk</h5>
 
                             <!-- Vertical Form -->
                             <form class="row g-3" method="post">
                                 <div class="col-12">
                                     <label for="kd_kat" class="form-label">Kode Kategori</label>
-                                    <input type="text" class="form-control" id="kd_kat" name="kd_kat" value="<?php echo $kd_kat; ?>" readonly>
+                                    <input type="text" class="form-control" id="kd_kat" name="kd_kat" value="<?php echo $hasil['kd_kat']; ?>" readonly>
                                 </div>
                                 <div class="col-12">
                                     <label for="nm_kat" class="form-label">Nama Kategori</label>
-                                    <input type="text" class="form-control" id="nm_kat" name="nm_kat" required>
+                                    <input type="text" class="form-control" id="nm_kat" name="nm_kat" value="<?php echo $hasil['category_name']; ?>" required>
                                 </div>
 
                                 <div class="text-center">
                                     <button type="button" class="btn btn-warning"><a href="Kategori_Produk.php" style="color: black; text-decoration:none;">Kembali</a></button>
                                     <button type="reset" class="btn btn-secondary">Reset</button>
-                                    <button type="submit" class="btn btn-success" name="simpan">Simpan</button>
+                                    <button type="submit" class="btn btn-success" name="update">Update</button>
                                 </div>
-                            </form><!-- Vertical Form -->
+                            </form><!-- Vertical Form --> 
 
                         </div>
                     </div>
