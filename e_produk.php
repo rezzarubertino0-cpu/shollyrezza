@@ -233,33 +233,28 @@ if (isset($_POST['update'])) {
                         <div class="card-body">
                             <h5 class="card-title">Tambah Produk</h5>
 
-                            <form class="row g-3" method="post" enctype="multipart/form-data">
-
-                                <!-- Kode Produk -->
+                            <form class="row g-3" method="post" enctype="multipart/form-data">                               
                                 <div class="col-12">
                                     <label for="kd_produk" class="form-label">Kode Produk</label>
                                     <input type="text" class="form-control" id="kd_produk"
                                         name="kd_produk"
                                         value="<?php echo $hasil['product_code']; ?>" readonly>
                                 </div>
-
-                                <!-- Nama Produk -->
+                                
                                 <div class="col-12">
                                     <label for="nm_produk" class="form-label">Nama Produk</label>
                                     <input type="text" class="form-control" id="nm_produk"
                                         name="nm_produk"
                                         value="<?php echo $hasil['product_name']; ?>" required>
                                 </div>
-
-                                <!-- Stok -->
+                               
                                 <div class="col-12">
                                     <label for="stok" class="form-label">Stok</label>
                                     <input type="number" class="form-control" id="stok"
                                         name="stok"
                                         value="<?php echo $hasil['stock']; ?>" required>
                                 </div>
-
-                                <!-- Minimal Stok -->
+                                
                                 <div class="col-12">
                                     <label for="min_stok" class="form-label">Minimal Stok</label>
                                     <input type="number" class="form-control" id="min_stok"
@@ -267,7 +262,6 @@ if (isset($_POST['update'])) {
                                         value="<?php echo $hasil['min_stock']; ?>" required>
                                 </div>
 
-                                <!-- Harga -->
                                 <div class="col-12">
                                     <label for="harga" class="form-label">Harga</label>
                                     <input type="number" class="form-control" id="harga"
@@ -288,21 +282,19 @@ if (isset($_POST['update'])) {
                                         ?>
                                     </select>
                                 </div>
-
-                                <!-- Gambar Lama -->
+                                
                                 <div class="col-12">
                                     <label class="form-label">Gambar Lama</label><br>
-                                    <img src="produk_img/<?php echo $hasil['gambar']; ?>" width="80">
+                                    <img src="produk_img/<?php echo $hasil['gambar']; ?>" 
+                                    width="80">
                                 </div>
-
-                                <!-- Ganti Gambar -->
+                                
                                 <div class="col-12">
                                     <label for="gambar" class="form-label">Ganti Gambar</label>
                                     <input type="file" class="form-control" id="gambar"
-                                        name="gambar" accept="image/*">
+                                    name="gambar" accept="image/*">
                                 </div>
-
-                                <!-- Tombol -->
+                        
                                 <div class="text-center">
                                     <a href="produk.php" class="btn btn-warning" style="color:black; text-decoration:none;">Kembali</a>
                                     <button type="reset" class="btn btn-secondary">Reset</button>
@@ -321,10 +313,10 @@ if (isset($_POST['update'])) {
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>Nama Sistem</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            Designed by <a href="">Nama Kalian</a>
+            Designed by <a href="">shollyrezza</a>
         </div>
     </footer><!-- End Footer -->
 
