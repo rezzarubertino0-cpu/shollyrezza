@@ -55,7 +55,7 @@
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>shollyrezza</h6>
+              <h6>Kevin Andreson</h6>
               <span>Admin</span>
             </li>
             <li>
@@ -162,6 +162,7 @@
     </div><!-- End Page Title -->
       <div class="row">
         <div class="col-lg-12">
+
           <div class="card">
             <div class="card-body mt-3">
               <a href="t_produk.php" class="btn btn-primary">Tambah Data</a>
@@ -194,9 +195,9 @@
                 include "koneksi.php";
                 $no = 1;
                 $sql = mysqli_query($conn, "
-SELECT p.*, c.category_name
-FROM products p
-LEFT JOIN categories c ON p.category_id = c.id
+  SELECT p.*, c.category_name
+  FROM products p
+  LEFT JOIN categories c ON p.category_id = c.id
 ");
 
                 while ($data = mysqli_fetch_array($sql)) {

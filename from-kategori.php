@@ -1,22 +1,3 @@
-<?php
-include "koneksi.php";
-$id = $_GET['id'];
-$sql = mysqli_query($conn, "SELECT * FROM categories WHERE id = '$id'");
-$hasil = mysqli_fetch_array($sql);
-if (isset($_POST['update'])) {
-
-    $nm_kat = $_POST['nm_kat'];
-
-    $query = mysqli_query($conn, "UPDATE categories SET category_name = '$nm_kat' WHERE id='$id'");
-    if ($query) {
-        echo "<script>alert('Data berhasil diubah!')</script>";
-        header("refresh:0, kategori_produk.php");
-    } else {
-        echo "<script>alert('Data gagal diubah!')</script>";
-        header("refresh:0, kategori_produk.php");
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,7 +5,7 @@ if (isset($_POST['update'])) {
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Kategori Produk - shollyrezza</title>
+    <title>Kategori Produk - Nama Sistem</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -58,16 +39,13 @@ if (isset($_POST['update'])) {
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.php" class="logo d-flex align-items-center">
                 <img src="assets/img/logo.png" alt="">
-                <span class="d-none d-lg-block">shollyrezza</span>
+                <span class="d-none d-lg-block">Nama Sistem</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
 
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
-
-
-                <li class="nav-item dropdown pe-3">
 
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                         <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
@@ -134,47 +112,44 @@ if (isset($_POST['update'])) {
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="index.php">
-                    <i class="bi bi-speedometer2"></i>
+                    <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
             </li><!-- End Dashboard Nav -->
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="kategori_produk.php">
-                    <i class="bi bi-tags"></i>
+                    <i class="bi bi-person"></i>
                     <span>Kategori Produk</span>
                 </a>
             </li><!-- End Profile Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link" href="produk.php">
-                    <i class="bi bi-box"></i>
-                    <span>Data Produk</span>
+                <a class="nav-link collapsed" href="produk.php">
+                    <i class="bi bi-question-circle"></i>
+                    <span>Data_Produk</span>
                 </a>
             </li><!-- End F.A.Q Page Nav -->
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="laporan.php">
-                    <i class="bi bi-bar-chart-line"></i>
+                    <i class="bi bi-envelope"></i>
                     <span>Laporan</span>
                 </a>
             </li><!-- End Contact Page Nav -->
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="users.php">
-                    <i class="bi bi-people"></i>
+                    <i class="bi bi-card-list"></i>
                     <span>Manajemen User</span>
                 </a>
             </li><!-- End Register Page Nav -->
-
-            
-
         </ul>
 
     </aside><!-- End Sidebar-->
 
-
     <main id="main" class="main">
+
         <div class="pagetitle">
             <h1>Kategori Produk</h1>
             <nav>
@@ -187,30 +162,35 @@ if (isset($_POST['update'])) {
         </div><!-- End Page Title -->
         <section class="section">
             <div class="row">
-
                 <div class="col-lg-6">
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Edit Kategori Produk</h5>
+                            <h5 class="card-title">Vertical Form</h5>
 
                             <!-- Vertical Form -->
-                            <form class="row g-3" method="post">
+                            <form class="row g-3">
                                 <div class="col-12">
-                                    <label for="kd_kat" class="form-label">Kode Kategori</label>
-                                    <input type="text" class="form-control" id="kd_kat" name="kd_kat" value="<?php echo $hasil['kd_kat']; ?>" readonly>
+                                    <label for="inputNanme4" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="inputNanme4">
                                 </div>
                                 <div class="col-12">
-                                    <label for="nm_kat" class="form-label">Nama Kategori</label>
-                                    <input type="text" class="form-control" id="nm_kat" name="nm_kat" value="<?php echo $hasil['category_name']; ?>" required>
+                                    <label for="inputEmail4" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="inputEmail4">
                                 </div>
-
+                                <div class="col-12">
+                                    <label for="inputPassword4" class="form-label">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword4">
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputAddress" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                </div>
                                 <div class="text-center">
-                                    <button type="button" class="btn btn-warning"><a href="Kategori_Produk.php" style="color: black; text-decoration:none;">Kembali</a></button>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
                                     <button type="reset" class="btn btn-secondary">Reset</button>
-                                    <button type="submit" class="btn btn-success" name="update">Update</button>
                                 </div>
-                            </form><!-- Vertical Form --> 
+                            </form><!-- Vertical Form -->
 
                         </div>
                     </div>
@@ -223,14 +203,10 @@ if (isset($_POST['update'])) {
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>Nama Sistem</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Designed by <a href="">Nama Kalian</a>
         </div>
     </footer><!-- End Footer -->
 
