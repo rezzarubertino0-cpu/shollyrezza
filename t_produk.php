@@ -44,10 +44,10 @@ if (isset($_POST['simpan'])) {
 
         if ($query) {
             echo "<script>alert('Produk berhasil ditambahkan!');</script>";
-            header("refresh:0, produk.php");
+            header("refresh:0, data_produk.php");
         } else {
             echo "<script>alert('Gagal menambahkan produk!');</script>";
-            header("refresh:0, produk.php");
+            header("refresh:0, data_produk.php");
         }
     }
 }
@@ -179,9 +179,9 @@ if (isset($_POST['simpan'])) {
             </li><!-- End Profile Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="produk.php">
+                <a class="nav-link collapsed" href="data_produk.php">
                     <i class="bi bi-question-circle"></i>
-                    <span>Data_Produk</span>
+                    <span>Data Produk</span>
                 </a>
             </li><!-- End F.A.Q Page Nav -->
 
@@ -205,7 +205,7 @@ if (isset($_POST['simpan'])) {
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Kategori Produk</h1>
+            <h1>Data Produk</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
@@ -220,7 +220,7 @@ if (isset($_POST['simpan'])) {
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Edit Produk</h5>
+                            <h5 class="card-title">Tambah Produk</h5>
 
                             <!-- Vertical Form -->
                             <form class="row g-3" method="post" enctype="multipart/form-data">
