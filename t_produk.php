@@ -44,10 +44,10 @@ if (isset($_POST['simpan'])) {
 
         if ($query) {
             echo "<script>alert('Produk berhasil ditambahkan!');</script>";
-            header("refresh:0, data_produk.php");
+            header("refresh:0, produk.php");
         } else {
             echo "<script>alert('Gagal menambahkan produk!');</script>";
-            header("refresh:0, data_produk.php");
+            header("refresh:0, produk.php");
         }
     }
 }
@@ -59,7 +59,7 @@ if (isset($_POST['simpan'])) {
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Data Produk - shollyrezza</title>
+    <title>Produk - shollyrezza</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -179,9 +179,9 @@ if (isset($_POST['simpan'])) {
             </li><!-- End Profile Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="data_produk.php">
+                <a class="nav-link collapsed" href="produk.php">
                     <i class="bi bi-question-circle"></i>
-                    <span>Data Produk</span>
+                    <span> Produk</span>
                 </a>
             </li><!-- End F.A.Q Page Nav -->
 
@@ -205,11 +205,11 @@ if (isset($_POST['simpan'])) {
     <main id="main" class="main">
 
         <div class="pagetitle">
-            <h1>Data Produk</h1>
+            <h1> Produk</h1>
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                    <li class="breadcrumb-item">Data Produk</li>
+                    <li class="breadcrumb-item"> Produk</li>
                     <li class="breadcrumb-item active">Tambah</li>
                 </ol>
             </nav>

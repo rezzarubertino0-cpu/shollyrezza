@@ -278,9 +278,9 @@
 
     <!-- Data Produk -->
     <li class="nav-item">
-      <a class="nav-link <?= ($page == 'data_produk.php') ? '' : 'collapsed' ?>" href="data_produk.php">
+      <a class="nav-link <?= ($page == 'produk.php') ? '' : 'collapsed' ?>" href="produk.php">
         <i class="bi bi-box"></i>
-        <span>Data Produk</span>
+        <span>Produk</span>
       </a>
     </li>
 
