@@ -1,4 +1,4 @@
-<?php $page = basename($_SERVER['PHP_SELF']); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,13 +30,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: NiceAdmin
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  
 </head>
 
 <body>
@@ -157,7 +151,6 @@
       </li><!-- End Register Page Nav -->
 
       
-
     </ul>
 
   </aside><!-- End Sidebar-->
@@ -165,11 +158,11 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Produk</h1>
+      <h1>Data Produk</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-          <li class="breadcrumb-item active">Produk</li>
+          <li class="breadcrumb-item active">Data Produk</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->

@@ -3,7 +3,7 @@ include "koneksi.php";
 
 $id = $_GET['id'];
 
-// ambil nama file gambar
+// ambil nama file gambar dulu
 $get = mysqli_query($conn, "SELECT gambar FROM products WHERE id='$id'");
 $data = mysqli_fetch_array($get);
 $gambar = $data['gambar'];

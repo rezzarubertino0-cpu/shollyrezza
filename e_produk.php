@@ -259,7 +259,7 @@ if (isset($_POST['update'])) {
                                     <input type="number" class="form-control" id="harga" name="harga" value="<?php echo $hasil['price']; ?>" required>
                                 </div>
 
-                                <!-- Kategori -->
+                                
                                 <div class="col-12">
                                     <label for="id_kategori" class="form-label">Kategori</label>
                                     <select class="form-control" id="id_kategori" name="id_kategori" required>
