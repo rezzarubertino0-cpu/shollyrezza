@@ -256,7 +256,7 @@
 
   </header><!-- End Header -->
 
- <!-- ======= Sidebar ======= -->
+  <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
     <ul class="sidebar-nav" id="sidebar-nav">
 
@@ -317,83 +317,93 @@
       </nav>
     </div><!-- End Page Title -->
 
-    <section class="section">
+
       <div class="row">
         <div class="col-lg-12">
 
           <div class="card">
             <div class="card-body mt-3">
-              
-              <!-- Table with stripped rows -->
-              <table class="table datatable">
-                <thead>
-                  <tr>
-                    <th>No</th>
-                    <th>Nama</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th>Status</th>
-                    <th>dibuat</th>
-                    <th>Aksi</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <?php
-                  include "koneksi.php";
-                  $no = 1;
-                  $sql = mysqli_query($conn, "SELECT * FROM users");
-                  while ($data = mysqli_fetch_array($sql)) {
-                  ?>
-                    <tr>
-                      <td><?php echo $no++; ?></td>
-                      <td><?php echo $data['name']; ?></td>
-                      <td><?php echo $data['email']; ?></td>
-                      <td><?php echo ucfirst($data['role']); ?></td>
-
-                      </td>
-                      <?php
-                      if ($data['is_active'] == 1) {
-                        echo '<span class="badge bg-success">aktif</span>';
-                      } else {
-                        echo '<span class="badge bg-danger">nonaktif</span>';
-                      }
-                      ?>
-                      </td>
-
-                      <td><?php echo date('d-m-Y H:i', strtotime($data['created_at'])); ?></td>
-
-                      <td>
-                        <a href="e_user.php?id=<?php echo $data['id']; ?>" class="btn btn-warning btn-sm">edit</a>
-                        <a href="h_user.php?id=<?php echo $data['id']; ?>"
-                          class="bt btn-danger btn-sm"
-                          onclick="return confirm('apakah anda yakin ingin menghapus user ini?')">hapus</a>
-                      </td>
-                    </tr>
-                  <?php } ?>
-                </tbody>
-              </table>
-              <!-- End Table with stripped rows -->
-
+              <a href="t_user.php" class="btn btn-primary">Tambah Data</a>
             </div>
           </div>
-
         </div>
       </div>
-    </section>
+      <section class="section">
+        <div class="row">
+          <div class="col-lg-12">
+
+            <div class="card">
+              <div class="card-body mt-3">
+                <!-- Table with stripped rows -->
+                <table class="table datatable">
+                  <thead>
+                    <tr>
+                      <th>No</th>
+                      <th>Nama</th>
+                      <th>Email</th>
+                      <th>Role</th>
+                      <th>Status</th>
+                      <th>dibuat</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <?php
+                    include "koneksi.php";
+                    $no = 1;
+                    $sql = mysqli_query($conn, "SELECT * FROM users");
+                    while ($data = mysqli_fetch_array($sql)) {
+                    ?>
+                      <tr>
+                        <td><?php echo $no++; ?></td>
+                        <td><?php echo $data['name']; ?></td>
+                        <td><?php echo $data['email']; ?></td>
+                        <td><?php echo ucfirst($data['role']); ?></td>
+
+                        </td>
+                        <?php
+                        if ($data['is_active'] == 1) {
+                          echo '<span class="badge bg-success">aktif</span>';
+                        } else {
+                          echo '<span class="badge bg-danger">nonaktif</span>';
+                        }
+                        ?>
+                        </td>
+
+                        <td><?php echo date('d-m-Y H:i', strtotime($data['created_at'])); ?></td>
+
+                        <td>
+                          <a href="e_user.php?id=<?php echo $data['id']; ?>" class="btn btn-warning btn-sm">edit</a>
+                          <a href="h_user.php?id=<?php echo $data['id']; ?>"
+                            class="bt btn-danger btn-sm"
+                            onclick="return confirm('apakah anda yakin ingin menghapus user ini?')">hapus</a>
+                        </td>
+                      </tr>
+                    <?php } ?>
+                  </tbody>
+                </table>
+                <!-- End Table with stripped rows -->
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>shollyrezza</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      Designed by <a href="https://www.instagram.com/shllyrz__">shollyrezza</a>
     </div>
   </footer><!-- End Footer -->
 

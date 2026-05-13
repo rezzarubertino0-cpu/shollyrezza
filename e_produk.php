@@ -301,10 +301,10 @@ if (isset($_POST['update'])) {
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>shollyrezza</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            Designed by <a href="">shollyrezza</a>
+            Designed by <a href="https://www.instagram.com/shllyrz__">shollyrezza</a>
         </div>
     </footer><!-- End Footer -->
 
