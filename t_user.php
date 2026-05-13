@@ -164,7 +164,7 @@ if (isset($_POST['simpan'])) {
             <li class="nav-item">
                 <a class="nav-link collapsed" href="produk.php">
                     <i class="bi bi-question-circle"></i>
-                    <span>Data_Produk</span>
+                    <span>Data Produk</span>
                 </a>
             </li><!-- End F.A.Q Page Nav -->
 
@@ -203,14 +203,12 @@ if (isset($_POST['simpan'])) {
 
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">manajemen user</h5>
-
+                         
                             <!-- Vertical Form -->
                             <div class="card-body">
                                 <h5 class="card-title">Tambah User</h5>
 
                                 <form class="row g-3" method="post">
-
                                     <div class="col-12">
                                         <label for="name" class="form-label">Nama</label>
                                         <input type="text" class="form-control" id="name" name="name" required>
@@ -270,7 +268,7 @@ if (isset($_POST['simpan'])) {
             &copy; Copyright <strong><span>shollyrezza</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            Designed by <a href="">shollyrezza</a>
+            Designed by <a href="https://www.instagram.com/shllyrz__">shollyrezza</a>
         </div>
     </footer><!-- End Footer -->
 
