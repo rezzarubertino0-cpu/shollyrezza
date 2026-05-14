@@ -386,7 +386,7 @@ $total_stok_kritis = mysqli_num_rows(mysqli_query(
         <div class="col-lg-6">
           <div class="card shadow-sm">
             <div class="card-body">
-              <h5 class="card-title text-warning">Stok Minimum</h5>
+              <h5 class="card-title text-dark">Stok Minimum</h5>
               <p class="text-muted">Barang dengan stok hampir habis.</p>
 
               <div class="d-flex justify-content-between align-items-center">

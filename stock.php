@@ -38,7 +38,7 @@ VALUES
     ('$product_id','$change_type','$qty','$stock_before','$stock_after','$note','$user_id')
 ");
 
-  header("Location: stok.php?success=1");
+  header("Location: stock.php?success=1");
   exit;
 }
 
