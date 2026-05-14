@@ -336,7 +336,7 @@ VALUES
 
       <!-- Manajemen User -->
       <li class="nav-item">
-        <a class="nav-link <?= ($page == 'user.php') ? '' : 'collapsed' ?>" href="user.php">
+        <a class="nav-link <?= ($page == 'users.php') ? '' : 'collapsed' ?>" href="users.php">
           <i class="bi bi-people"></i>
           <span>Manajemen User</span>
         </a>
@@ -411,22 +411,19 @@ VALUES
                 </div>
 
                 <!-- BUTTON -->
-                <button type="submit" name="submit" class="btn btn-primary w-100">
-                  Simpan Perubahan
-                </button>
-
+                <button type="submit" name="submit" class="btn btn-primary w-100">Simpan Perubahan</button>
               </form>
             </div>
           </div>
         </div>
 
-        <!-- RIWAYAT STOK -->
+        <!-- TABEL RIWAYAT STOK -->
         <div class="col-lg-6">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Riwayat Stok</h5>
 
-              <table class="table table-striped">
+              <table class="table">
                 <thead>
                   <tr>
                     <th>Tanggal</th>
@@ -438,7 +435,6 @@ VALUES
                 </thead>
 
                 <tbody>
-
                   <?php
                   $query = mysqli_query($conn, "
                                 SELECT sl.*, p.product_name, u.name
@@ -450,22 +446,21 @@ VALUES
 
                   while ($row = mysqli_fetch_assoc($query)) {
 
-                    $badge = $row['change_type'] == 'ADD'
-                      ? "<span class='badge bg-success'>+(ADD)</span>"
-                      : "<span class='badge bg-danger'>(REDUCE)</span>";
+                    $badge = ($row['Change_type'] == 'ADD')
+                      ? "<span class='badge bg-success'>+ (ADD)</span>"
+                      : "<span class='badge bg-danger'>- (REDUCE)</span>";
 
                     echo "
                                     <tr>
                                         <td>" . date('d M Y', strtotime($row['created_at'])) . "</td>
                                         <td>{$row['product_name']}</td>
-                                        <td>$badge</td>
+                                        <td>{$badge}</td>
                                         <td>{$row['qty']}</td>
                                         <td>{$row['name']}</td>
                                     </tr>
                                 ";
                   }
                   ?>
-
                 </tbody>
               </table>
 
@@ -475,7 +470,6 @@ VALUES
 
       </div>
     </section>
-
   </main><!-- End #main -->
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
