@@ -107,7 +107,7 @@ if (isset($_POST['simpan'])) {
 
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                         <li class="dropdown-header">
-                            <h6>Kevin Andreson</h6>
+                            <h6>shollyrezza</h6>
                             <span>Admin</span>
                         </li>
                         <li>
