@@ -20,6 +20,7 @@ $data_produk = mysqli_fetch_assoc($q_produk);
 $q_stok = mysqli_query($conn, "SELECT SUM(stock) as total_stok FROM products");
 $data_stok = mysqli_fetch_assoc($q_stok);
 
+
 // Total kategori
 $q_kategori = mysqli_query($conn, "SELECT COUNT(*) as total_kategori FROM categories");
 $data_kategori = mysqli_fetch_assoc($q_kategori);
@@ -112,7 +113,7 @@ function waktu_lalu($datetime)
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <title>Dashboard - shollyrezza</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -293,7 +294,7 @@ function waktu_lalu($datetime)
                     </div>
 
                     <div class="ps-3">
-                      <h6><?= $data_produk['total_produk']; ?></h6>
+                      <h6><?= $data_stok['total_stok']; ?></h6>
                       <span class="text-muted small pt-2 ps-1">Jumlah Semua Stok</span>
                     </div>
                   </div>
