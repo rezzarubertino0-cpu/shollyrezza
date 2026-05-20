@@ -114,7 +114,7 @@ if (!isset($_SESSION['login'])) {
       <li class="nav-item">
         <a class="nav-link collapsed" href="produk.php">
           <i class="bi bi-box-seam"></i>
-          <span> Produk</span>
+          <span>Data Produk</span>
         </a>
       </li><!-- End Data Produk Page Nav -->
 

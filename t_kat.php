@@ -144,7 +144,7 @@ if (isset($_POST['simpan'])) {
             <li class="nav-item">
                 <a class="nav-link" href="produk.php">
                     <i class="bi bi-box"></i>
-                    <span> Produk</span>
+                    <span>Data Produk</span>
                 </a>
             </li><!-- End F.A.Q Page Nav -->
 
