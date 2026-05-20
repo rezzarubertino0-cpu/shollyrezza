@@ -5,9 +5,10 @@ require_once 'vendor/paragonie/random_compat/lib/random.php';
 // Koneksi database
 require_once('koneksi.php');
 
-function query($query)
+function query(string $query)
 {
     global $conn;
+
     $result = mysqli_query($conn, $query);
 
     $rows = [];
@@ -34,7 +35,7 @@ $data = query("
     FROM stock_logs sl
     JOIN products p ON sl.product_id = p.id
     JOIN categories c ON p.category_id = c.id
-    LEFT JOIN users u ON sl.created_by = u.id
+    JOIN users u ON sl.created_by = u.id
     WHERE sl.change_type = 'ADD'
     ORDER BY sl.created_at DESC
 ");
@@ -48,6 +49,7 @@ $html = '
 <html>
 <head>
     <title>Laporan Barang Masuk</title>
+
     <style>
         body {
             font-family: sans-serif;
@@ -102,8 +104,10 @@ $html = '
         }
     </style>
 </head>
+
 <body>
-    <h1>Shollyrezza</h1>
+
+    <h1>ilventory</h1>
     <hr>
     <h3>LAPORAN BARANG MASUK</h3>
 
@@ -122,23 +126,45 @@ $html = '
                 <th>Diinput Oleh</th>
             </tr>
         </thead>
+
         <tbody>
 ';
 
 $no = 1;
+
 foreach ($data as $row) {
+
     $html .= '
         <tr>
             <td class="text-center">' . $no++ . '</td>
-            <td class="text-center">' . date('d-m-Y H:i', strtotime($row['created_at'])) . '</td>
+
+            <td class="text-center">' .
+                date('d-m-Y H:i', strtotime($row['created_at'])) .
+            '</td>
+
             <td>' . $row['product_code'] . '</td>
+
             <td>' . $row['product_name'] . '</td>
+
             <td>' . $row['category_name'] . '</td>
-            <td class="text-center qty-masuk">+' . $row['qty'] . '</td>
-            <td class="text-center">' . $row['stock_before'] . '</td>
-            <td class="text-center">' . $row['stock_after'] . '</td>
+
+            <td class="text-center qty-masuk">+' .
+                $row['qty'] .
+            '</td>
+
+            <td class="text-center">' .
+                $row['stock_before'] .
+            '</td>
+
+            <td class="text-center">' .
+                $row['stock_after'] .
+            '</td>
+
             <td>' . $row['note'] . '</td>
-            <td class="text-center">' . $row['created_by'] . '</td>
+
+            <td class="text-center">' .
+                $row['created_by'] .
+            '</td>
         </tr>
     ';
 }
@@ -146,6 +172,7 @@ foreach ($data as $row) {
 $html .= '
         </tbody>
     </table>
+
 </body>
 </html>
 ';
