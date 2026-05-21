@@ -5,7 +5,7 @@ require_once 'vendor/paragonie/random_compat/lib/random.php';
 // Koneksi database
 require_once('koneksi.php');
 
-function query(string $query)
+function query($query)
 {
     global $conn;
 
@@ -107,7 +107,7 @@ $html = '
 
 <body>
 
-    <h1>ilventory</h1>
+    <h1>shollyrezza</h1>
     <hr>
     <h3>LAPORAN BARANG MASUK</h3>
 
