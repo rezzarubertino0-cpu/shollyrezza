@@ -65,7 +65,7 @@ VALUES
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/rezza.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -99,7 +99,7 @@ VALUES
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
+        <img src="assets/img/rezza.png" alt="">
         <span class="d-none d-lg-block">shollyrezza</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -114,7 +114,7 @@ VALUES
                         href="#"
                         data-bs-toggle="dropdown">
                         <img
-                            src="assets/img/profile-img.jpg"
+                            src="assets/img/rezza2.png"
                             alt="Profile"
                             class="rounded-circle" /> </a><!-- End Profile Image Icon -->
 
