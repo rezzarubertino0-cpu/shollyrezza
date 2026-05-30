@@ -52,7 +52,7 @@ if (isset($_POST['simpan'])) {
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Manajemen user - shollyrezza</title>
+    <title>Manajemen user - rezzaproject</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -86,7 +86,7 @@ if (isset($_POST['simpan'])) {
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.php" class="logo d-flex align-items-center">
                 <img src="assets/img/rezza.png" alt="">
-                <span class="d-none d-lg-block">Shollyrezza</span>
+                <span class="d-none d-lg-block">rezzaproject</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
@@ -253,10 +253,10 @@ if (isset($_POST['simpan'])) {
     <!-- ======= Footer ======= -->
     <footer id="footer" class="footer">
         <div class="copyright">
-            &copy; Copyright <strong><span>shollyrezza</span></strong>. All Rights Reserved
+            &copy; Copyright <strong><span>rezzaproject</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            Designed by <a href="https://www.instagram.com/shllyrz__">shollyrezza</a>
+            Designed by <a href="https://www.instagram.com/shllyrz__">rezzaproject</a>
         </div>
     </footer><!-- End Footer -->
 

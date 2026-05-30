@@ -61,7 +61,7 @@ $html = '
     </style>
 </head>
 <body>
-    <h1>shollyrezza</h1>
+    <h1>rezzaproject</h1>
     <hr>
     <h3>LAPORAN STOK MINIMUM</h3>
 

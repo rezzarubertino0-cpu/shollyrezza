@@ -107,7 +107,7 @@ $html = '
 
 <body>
 
-    <h1>shollyrezza</h1>
+    <h1>rezzaproject</h1>
     <hr>
     <h3>LAPORAN BARANG MASUK</h3>
 

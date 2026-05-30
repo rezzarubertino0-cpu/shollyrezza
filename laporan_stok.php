@@ -115,7 +115,7 @@ object-fit: cover;
 
 <body>
 
-<h1>shollyrezza</h1>
+<h1>rezzaproject</h1>
 <hr>
 <h3>LAPORAN STOK BARANG</h3>
 
