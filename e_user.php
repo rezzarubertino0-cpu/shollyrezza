@@ -160,7 +160,7 @@ if (isset($_POST['update'])) {
 
     </header><!-- End Header -->
 
-    <!-- ======= Sidebar ======= -->
+     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
 
         <ul class="sidebar-nav" id="sidebar-nav">
@@ -174,35 +174,35 @@ if (isset($_POST['update'])) {
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="kategori_produk.php">
-                    <i class="bi bi-person"></i>
+                    <i class="bi bi-tags"></i>
                     <span>Kategori Produk</span>
                 </a>
             </li><!-- End Profile Page Nav -->
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="produk.php">
-                    <i class="bi bi-question-circle"></i>
+                    <i class="bi bi-box-seam"></i>
                     <span>Data Produk</span>
                 </a>
             </li><!-- End F.A.Q Page Nav -->
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="laporan.php">
-                    <i class="bi bi-envelope"></i>
+                    <i class="bi bi-bar-chart-line"></i>
                     <span>Laporan</span>
                 </a>
             </li><!-- End Contact Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="users.php">
-                    <i class="bi bi-card-list"></i>
+                <a class="nav-link " href="users.php">
+                    <i class="bi bi-people"></i>
                     <span>Manajemen User</span>
                 </a>
             </li><!-- End Register Page Nav -->
         </ul>
 
     </aside><!-- End Sidebar-->
-
+    
     <main id="main" class="main">
 
         <div class="pagetitle">

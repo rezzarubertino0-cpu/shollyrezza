@@ -154,7 +154,7 @@ if (isset($_POST['simpan'])) {
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="index.php">
-                    <i class="bi bi-speedometer2"></i>
+                    <i class="bi bi-grid"></i>
                     <span>Dashboard</span>
                 </a>
             </li><!-- End Dashboard Nav -->
@@ -167,8 +167,8 @@ if (isset($_POST['simpan'])) {
             </li><!-- End Profile Page Nav -->
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="produk.php">
-                    <i class="bi bi-box"></i>
+                <a class="nav-link " href="produk.php">
+                    <i class="bi bi-box-seam"></i>
                     <span>Data Produk</span>
                 </a>
             </li><!-- End F.A.Q Page Nav -->
@@ -189,7 +189,7 @@ if (isset($_POST['simpan'])) {
         </ul>
 
     </aside><!-- End Sidebar-->
-
+    
     <main id="main" class="main">
 
         <div class="pagetitle">
