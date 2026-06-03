@@ -102,7 +102,7 @@ if (!isset($_SESSION['login'])) {
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="index.php">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-speedometer2"></i>
           <span>Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
@@ -115,7 +115,7 @@ if (!isset($_SESSION['login'])) {
 
       <li class="nav-item">
         <a class="nav-link " href="produk.php">
-          <i class="bi bi-box-seam"></i>
+          <i class="bi bi-box"></i>
           <span>Data Produk</span>
         </a>
       </li><!-- End Data Produk Page Nav -->
